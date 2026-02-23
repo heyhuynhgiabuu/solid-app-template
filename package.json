@@ -1,0 +1,46 @@
+{
+	"name": "@your-name/solid-app-template",
+	"version": "0.0.1",
+	"author": "Your Name <you@example.com>",
+	"type": "module",
+	"scripts": {
+		"build": "vite build",
+		"dev": "vite dev",
+		"format": "oxfmt",
+		"lint": "oxlint . && eslint .",
+		"lint:oxlint": "oxlint .",
+		"lint:eslint": "eslint .",
+		"preinstall": "command -v git >/dev/null 2>&1 && git config core.hooksPath git-hooks || exit 0",
+		"test": "npm-run-all --parallel tsc:check vitest:run lint lint:format",
+		"tsc:check": "tsgo",
+		"vitest:run": "vitest run"
+	},
+	"dependencies": {
+		"solid-js": "^1.9.5"
+	},
+	"devDependencies": {
+		"@solidjs/router": "^0.15.3",
+		"@swc/core": "^1.15.11",
+		"@tailwindcss/vite": "^4.1.18",
+		"@types/node": "^25.2.3",
+		"eslint-plugin-solid": "^0.14.0",
+		"npm-run-all2": "^8.0.4",
+		"oxfmt": "^0.32.0",
+		"oxlint": "^1.47.0",
+		"tailwindcss": "^4.1.18",
+		"tsgo": "^0.9.3",
+		"typescript": "^5.9.3",
+		"vite": "^7.3.1",
+		"vite-plugin-solid": "^2.11.6",
+		"vitest": "^4.0.18"
+	},
+	"browserslist": [
+		">0.2%",
+		"not dead",
+		"not op_mini all"
+	],
+	"engines": {
+		"node": ">=23.0.0",
+		"pnpm": ">=10.0.0"
+	}
+}
