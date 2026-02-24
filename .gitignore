@@ -1,6 +1,29 @@
-.DS_Store
+# Dependencies
 node_modules/
+
+# Build output
 dist/
+client/dist/
+server/dist/
+
+# Environment
 .env
 .env.local
+server/.env
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Prisma generated
+server/src/prisma/prisma-client/
+
+# Test coverage
+coverage/
+
+# Misc
 *.log

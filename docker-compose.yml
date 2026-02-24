@@ -1,0 +1,10 @@
+services:
+  db:
+    image: postgres:17
+    restart: always
+    container_name: solid-app-db
+    ports:
+      - '5432:5432'
+    environment:
+      POSTGRES_USER: solid
+      POSTGRES_PASSWORD: solid

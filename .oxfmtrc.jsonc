@@ -1,0 +1,21 @@
+{
+  "$schema": "./node_modules/oxfmt/configuration_schema.json",
+  "singleQuote": true,
+  "experimentalSortImport": {
+    "newlinesBetween": false,
+  },
+  "experimentalSortPackageJson": {
+    "sortScripts": true,
+  },
+  "experimentalTailwindcss": {
+    "stylesheet": "client/src/App.css",
+  },
+  "ignorePatterns": [
+    "**/*.html",
+    "client/dist/",
+    "coverage/",
+    "dist/",
+    "pnpm-lock.yaml",
+    "server/dist",
+  ],
+}

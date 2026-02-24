@@ -1,0 +1,32 @@
+{
+  "name": "@app/server",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsdown",
+    "dev": "NODE_ENV=development node --no-warnings --experimental-specifier-resolution=node --loader ts-node/esm --env-file .env src/index.ts",
+    "dev:setup": "pnpm prisma generate"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.14.1",
+    "@hono/trpc-server": "^0.4.2",
+    "@prisma/adapter-pg": "^6.9.0",
+    "@prisma/client": "^6.9.0",
+    "@trpc/server": "^11.10.0",
+    "better-auth": "^1.4.18",
+    "hono": "^4.7.12",
+    "zod": "^3.25.20"
+  },
+  "devDependencies": {
+    "@types/node": "^22.15.0",
+    "nodemon": "^3.1.11",
+    "prisma": "^6.9.0"
+  },
+  "nodemonConfig": {
+    "ext": "ts,tsx",
+    "watch": [
+      "src/"
+    ]
+  }
+}
